@@ -1,0 +1,15 @@
+:root {
+  --background-color: #262626;
+}
+
+html {
+  color-scheme: dark light;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+
+  background-color: var(--background-color);
+}
