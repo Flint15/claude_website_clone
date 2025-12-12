@@ -1,3 +1,11 @@
+nav {
+  width: 47.8px;
+}
+
+.sidebar-button-container {
+  padding: 8px;
+}
+
 .sidebar-button {
   background-color: transparent;
   border: none;
@@ -8,6 +16,29 @@
   cursor: pointer;
 }
 
-.sidebar-button-container {
-  margin: 8px;
+.new-chat-link-container {
+  padding: 8px 8px 0px 8px;
+}
+
+.new-chat-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 5px;
+}
+
+.new-chat-link-svg-container {
+  background-color: rgb(214, 118, 83);
+  border-radius: 20px;
+
+  padding: 1px;
+
+  height: 20px;
+  width: 20px;
+}
+
+.can-focus:hover {
+  background-color: rgb(23, 23, 23);
+  border-radius: 4px;
 }
