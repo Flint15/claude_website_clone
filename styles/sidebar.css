@@ -1,5 +1,10 @@
 nav {
-  width: 47.8px;
+  width: 48px;
+  height: 100vh;
+
+  border-right: 1px solid rgb(63, 63, 63);
+
+  position: relative;
 }
 
 .sidebar-button-container {
@@ -53,4 +58,31 @@ nav {
   justify-content: center;
 
   padding: 6px;
+}
+
+.user {
+  position: fixed;
+  bottom: 0px;
+}
+
+.user-button {
+  background-color: transparent;
+  border: none;
+
+  margin: 8px 0px 8px 0px;
+  padding: 8px 5px;
+
+  cursor: pointer;
+}
+
+.litteraly-me {
+  height: 38px;
+
+  border-radius: 20px;
+
+  transition: transform 0.2s;
+}
+
+.litteraly-me:hover {
+  transform: scale(1.04);
 }
