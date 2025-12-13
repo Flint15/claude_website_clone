@@ -42,3 +42,15 @@ nav {
   background-color: rgb(23, 23, 23);
   border-radius: 4px;
 }
+
+.sidebar-navigations {
+  padding: 1px 8px 0px 8px;
+}
+
+.navigation-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 6px;
+}
