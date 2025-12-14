@@ -1,3 +1,12 @@
+:root {
+  --additional-background-color: rgb(23, 23, 23);
+  --additional-font-color: rgb(156, 154, 146);
+}
+
+body {
+  display: flex;
+}
+
 nav {
   width: 48px;
   height: 100vh;
@@ -44,7 +53,7 @@ nav {
 }
 
 .can-focus:hover {
-  background-color: rgb(23, 23, 23);
+  background-color: var(--additional-background-color);
   border-radius: 4px;
 }
 
@@ -61,7 +70,7 @@ nav {
 }
 
 .user {
-  position: fixed;
+  position: absolute;
   bottom: 0px;
 }
 
@@ -85,4 +94,40 @@ nav {
 
 .litteraly-me:hover {
   transform: scale(1.04);
+}
+
+
+main {
+  position: relative;
+  
+  width: 100%;
+
+  padding: 120px 32px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.incognito-mode-container {
+  position: fixed;
+  top: 10px;
+  right: 17px;
+
+  padding: 6px;
+
+  cursor: pointer;
+}
+
+.upgrade-plan {
+  background-color: var(--additional-background-color);
+  padding: 7px 13px;
+  border-radius: 5px;
+}
+
+.upgrade-plan p {
+  margin: 0px;
+  
+  font-family: sans-serif;
+  font-size: 14px;
+  color: var(--additional-font-color);
 }
