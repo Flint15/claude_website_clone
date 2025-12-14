@@ -1,8 +1,13 @@
 :root {
   --additional-background-color: rgb(23, 23, 23);
+  --input-field-background: rgb(48, 48, 46);
 
   --based-font-color: rgb(194, 192, 182);
   --additional-font-color: rgb(156, 154, 146);
+
+  --border-color: rgb(63, 63, 63);
+
+  --send-button-color: rgba(198, 97, 63, 0.5);
 }
 
 body {
@@ -13,7 +18,7 @@ nav {
   width: 48px;
   height: 100vh;
 
-  border-right: 1px solid rgb(63, 63, 63);
+  border-right: 1px solid var(--border-color);
 
   position: relative;
 }
@@ -56,7 +61,8 @@ nav {
 
 .can-focus:hover {
   background-color: var(--additional-background-color);
-  border-radius: 4px;
+  border-radius: 6px;
+  transition: background-color 0.2s;
 }
 
 .sidebar-navigations {
@@ -103,8 +109,7 @@ main {
   position: relative;
   
   width: 100%;
-
-  padding: 120px 32px;
+  height: 100vh;
 
   display: flex;
   justify-content: center;
@@ -114,6 +119,8 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  padding: 190px 32px 0px 32px;
 }
 
 .incognito-mode-container {
@@ -147,6 +154,7 @@ main {
   align-items: center;
 
   margin-top: 35px;
+  margin-bottom: 35px;
 }
 
 .welcome-label {
