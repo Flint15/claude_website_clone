@@ -7,7 +7,7 @@ body {
   display: flex;
 }
 
-#main-navigation {
+aside {
   width: 48px;
   height: 100vh;
 
