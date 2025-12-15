@@ -30,6 +30,9 @@ main {
 }
 
 .incognito-mode-container {
+  background-color: transparent;
+  border: none;
+
   position: fixed;
   top: 10px;
   right: 17px;
@@ -39,7 +42,7 @@ main {
   cursor: pointer;
 }
 
-.upgrade-plan {
+.upgrade-baner {
   background-color: var(--color-bg-secondary);
   padding: 7px 13px;
   border-radius: 5px;
@@ -47,7 +50,7 @@ main {
   width: 130px;
 }
 
-.upgrade-plan p {
+.upgrade-baner p {
   margin: 0px;
   
   font-family: sans-serif;
@@ -55,7 +58,7 @@ main {
   color: var(--additional-font-color);
 }
 
-.welcome {
+.welcome-section {
   display: flex;
   align-items: center;
 

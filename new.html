@@ -9,82 +9,108 @@
   <title>Claude Clone</title>
 </head>
 <body>
-  <nav>
+  <nav aria-label="Main navigation" id="main-navigation">
     <div class="sidebar-button-container">
-      <button class="sidebar-button can-focus">
+      <button 
+        class="sidebar-button can-focus"
+        aria-label="Toggle sidebar">
         <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#999999"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm240-80h400v-480H400v480Zm-80 0v-480H160v480h160Zm-160 0v-480 480Zm160 0h80-80Zm0-480h80-80Z"/></svg>
       </button>
     </div>
     <div class="sidebar-content">
       <div class="sidebar-actions-container">
         <div class="new-chat-link-container">
-          <a class="new-chat-link can-focus" href="./new.html">
+          <a 
+            class="new-chat-link can-focus"
+            href="./new.html"
+            aria-label="Start new chat">
             <div class="new-chat-link-svg-container">
               <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#F3F3F3"><path d="M444-444H240v-72h204v-204h72v204h204v72H516v204h-72v-204Z"/></svg>
             </div>
           </a>
         </div>
-        <div class="sidebar-navigations">
+        <nav aria-label="Secondary navigation" class="sidebar-navigation">
           <div class="chats">
-            <a class="navigation-icon-container can-focus" href="./pages/chats.html" target="_blank">
+            <a 
+              class="navigation-icon-container can-focus"
+              href="./pages/chats.html"
+              target="_blank"
+              aria-label="View chat history">
               <svg fill="#F3F3F3" width="20px" height="20px" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg"><path d="M226.24072,189.28271A76.00889,76.00889,0,0,0,166.75732,76.316a75.99462,75.99462,0,1,0-136.998,64.96667l-6.6377,23.2334a9.99929,9.99929,0,0,0,12.36133,12.36328l23.23438-6.63818A75.8485,75.8485,0,0,0,89.21,179.69043a76.04093,76.04093,0,0,0,108.07275,38.55029l23.23438,6.63867a9.9987,9.9987,0,0,0,12.36133-12.3623ZM59.25146,161.92822a3.99738,3.99738,0,0,0-1.09863.15381l-24.86719,7.105a2,2,0,0,1-2.47265-2.47265l7.10449-24.86719a4.00117,4.00117,0,0,0-.40723-3.14307,67.97064,67.97064,0,1,1,23.78614,23.78613A4.00029,4.00029,0,0,0,59.25146,161.92822Zm165.42676,54.75a1.96577,1.96577,0,0,1-1.96386.50879l-24.86719-7.10449a3.99913,3.99913,0,0,0-3.14356.4082,68.0381,68.0381,0,0,1-96.70752-30.54126A75.97949,75.97949,0,0,0,169.50244,84.6731a68.01461,68.01461,0,0,1,48.98828,102.03051,3.99743,3.99743,0,0,0-.4082,3.14307l7.10449,24.86865A1.96026,1.96026,0,0,1,224.67822,216.67822Z"/></svg>
             </a>
           </div>
           <div class="projects">
-            <a class="navigation-icon-container can-focus" href="./pages/projects.html" target="_blank">
+            <a
+              class="navigation-icon-container can-focus"
+              href="./pages/projects.html"
+              target="_blank"
+              aria-label="View projects">
               <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#F3F3F3"><path d="M120-144q-29 0-50.5-21.5T48-216v-480h72v480h648v72H120Zm144-144q-29 0-50.5-21.5T192-360v-432q0-29.7 21.5-50.85Q235-864 264-864h169l96 96h263q29.7 0 50.85 21.15Q864-725.7 864-696v336q0 29-21.15 50.5T792-288H264Zm0-72h528v-336H500l-96-96H264v432Zm0 0v-432 432Z"/></svg>
             </a>
           </div>
           <div class="artifacts">
-            <a class="navigation-icon-container can-focus" href="./pages/artifacts.html" target="_blank">
+            <a
+              class="navigation-icon-container can-focus"
+              href="./pages/artifacts.html"
+              target="_blank"
+              aria-label="View artifacts">
               <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#F3F3F3"><path d="m96-528 192-336 192 336H96Zm192 384q-60 0-102-42.24t-42-101.55Q144-348 186-390q42-42 102-42t102 42q42 42 42 102t-42 102q-42 42-102 42Zm.21-72Q318-216 339-237.21t21-51Q360-318 338.79-339t-51-21Q258-360 237-338.79t-21 51Q216-258 237.21-237t51 21ZM221-600h134l-67-119-67 119Zm307 456v-288h288v288H528Zm72-72h144v-144H600v144Zm72-312q-54-45-89.06-74.59-35.05-29.58-56-52Q506-677 497.5-696q-8.5-19-8.5-42.67 0-42.62 28-71.97Q545-840 589.46-840q25.54 0 46.04 10.5T672-797q16-22 37-32.5t46.18-10.5Q799-840 827-810.64q28 29.35 28 71.97 0 23.67-8 42.67t-29.13 41.2q-21.13 22.2-56.5 51.5Q726-574 672-528Zm0-96q68-57 89.5-78.5T783-740q0-11-8-19.5t-18.74-8.5q-8.26 0-15.26 4t-12 10l-57 53-56-53q-6-6-13.21-10-7.2-4-14.79-4-11 0-19 8.5t-8 19.5q0 17 22.5 39t88.5 77Zm0-77Zm-383 48Zm0 362Zm382 0Z"/></svg>
             </a>
           </div>
           <div class="blank-sidebar-space"></div>
-        </div>
+        </nav>
         <div class="user">
-          <button class="user-button">
-            <img class="literally-me" src="./assets/itoshi_rin_pfp.jfif">
+          <button class="user-button" aria-label="User profile menu">
+            <img 
+              class="literally-me" 
+              src="./assets/itoshi_rin_pfp.jfif"
+              alt="User profile">
           </button>
         </div>
       </div>
     </div>
   </nav>
-  <main>
-    <div class="incognito-mode-container can-focus">
-      <svg width="20px" height="20px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M10 10.5C10 11.3284 9.55228 12 9 12C8.44772 12 8 11.3284 8 10.5C8 9.67157 8.44772 9 9 9C9.55228 9 10 9.67157 10 10.5Z" fill="#F3F3F3"/>
-      <path d="M16 10.5C16 11.3284 15.5523 12 15 12C14.4477 12 14 11.3284 14 10.5C14 9.67157 14.4477 9 15 9C15.5523 9 16 9.67157 16 10.5Z" fill="#F3F3F3"/>
-      <path d="M12 1.25C6.04216 1.25 1.25 6.21861 1.25 12.3006V19.723C1.25 21.5695 3.16246 22.8461 4.8426 21.9808C5.52425 21.6297 6.33486 21.6808 6.97157 22.1181C8.19859 22.9606 9.80141 22.9606 11.0284 22.1181L11.3811 21.8759C11.7572 21.6176 12.2428 21.6176 12.6189 21.8759L12.9716 22.1181C14.1986 22.9606 15.8014 22.9606 17.0284 22.1181C17.6651 21.6808 18.4757 21.6297 19.1574 21.9808C20.8375 22.8461 22.75 21.5695 22.75 19.723V12.3006C22.75 6.21861 17.9578 1.25 12 1.25ZM2.75 12.3006C2.75 7.00485 6.91215 2.75 12 2.75C17.0879 2.75 21.25 7.00485 21.25 12.3006V19.723C21.25 20.5212 20.4605 20.9647 19.8442 20.6472C18.6697 20.0424 17.2693 20.133 16.1793 20.8815C15.4639 21.3728 14.5361 21.3728 13.8207 20.8815L13.468 20.6394C12.5804 20.0298 11.4196 20.0298 10.532 20.6394L10.1793 20.8815C9.46387 21.3728 8.53613 21.3728 7.8207 20.8815C6.73074 20.133 5.33026 20.0424 4.1558 20.6472C3.53949 20.9647 2.75 20.5212 2.75 19.723V12.3006Z" fill="#F3F3F3"/>
-      </svg>
-    </div>
+  <main id="main-content">
+    <button 
+      class="incognito-mode-container can-focus"
+      aria-label="Toggle incognito mode">
+        <svg width="20px" height="20px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 10.5C10 11.3284 9.55228 12 9 12C8.44772 12 8 11.3284 8 10.5C8 9.67157 8.44772 9 9 9C9.55228 9 10 9.67157 10 10.5Z" fill="#F3F3F3"/>
+        <path d="M16 10.5C16 11.3284 15.5523 12 15 12C14.4477 12 14 11.3284 14 10.5C14 9.67157 14.4477 9 15 9C15.5523 9 16 9.67157 16 10.5Z" fill="#F3F3F3"/>
+        <path d="M12 1.25C6.04216 1.25 1.25 6.21861 1.25 12.3006V19.723C1.25 21.5695 3.16246 22.8461 4.8426 21.9808C5.52425 21.6297 6.33486 21.6808 6.97157 22.1181C8.19859 22.9606 9.80141 22.9606 11.0284 22.1181L11.3811 21.8759C11.7572 21.6176 12.2428 21.6176 12.6189 21.8759L12.9716 22.1181C14.1986 22.9606 15.8014 22.9606 17.0284 22.1181C17.6651 21.6808 18.4757 21.6297 19.1574 21.9808C20.8375 22.8461 22.75 21.5695 22.75 19.723V12.3006C22.75 6.21861 17.9578 1.25 12 1.25ZM2.75 12.3006C2.75 7.00485 6.91215 2.75 12 2.75C17.0879 2.75 21.25 7.00485 21.25 12.3006V19.723C21.25 20.5212 20.4605 20.9647 19.8442 20.6472C18.6697 20.0424 17.2693 20.133 16.1793 20.8815C15.4639 21.3728 14.5361 21.3728 13.8207 20.8815L13.468 20.6394C12.5804 20.0298 11.4196 20.0298 10.532 20.6394L10.1793 20.8815C9.46387 21.3728 8.53613 21.3728 7.8207 20.8815C6.73074 20.133 5.33026 20.0424 4.1558 20.6472C3.53949 20.9647 2.75 20.5212 2.75 19.723V12.3006Z" fill="#F3F3F3"/>
+        </svg>
+    </button>
     <div class="content">
-      <div class="upgrade-plan">
+      <div class="upgrade-baner" role="banner">
         <p class="upgrade-plan-paragraph">
-          Free plan &#8226;  <u>Upgrade</u>
+          Free plan &#8226; <u>Upgrade</u>
         </p>
       </div>
-      <div class="welcome">
+      <header class="welcome-section">
         <div class="claude-icon-container">
           <svg height="32px" viewBox="0 0 24 24" width="32px" xmlns="http://www.w3.org/2000/svg"><path d="M4.709 15.955l4.72-2.647.08-.23-.08-.128H9.2l-.79-.048-2.698-.073-2.339-.097-2.266-.122-.571-.121L0 11.784l.055-.352.48-.321.686.06 1.52.103 2.278.158 1.652.097 2.449.255h.389l.055-.157-.134-.098-.103-.097-2.358-1.596-2.552-1.688-1.336-.972-.724-.491-.364-.462-.158-1.008.656-.722.881.06.225.061.893.686 1.908 1.476 2.491 1.833.365.304.145-.103.019-.073-.164-.274-1.355-2.446-1.446-2.49-.644-1.032-.17-.619a2.97 2.97 0 01-.104-.729L6.283.134 6.696 0l.996.134.42.364.62 1.414 1.002 2.229 1.555 3.03.456.898.243.832.091.255h.158V9.01l.128-1.706.237-2.095.23-2.695.08-.76.376-.91.747-.492.584.28.48.685-.067.444-.286 1.851-.559 2.903-.364 1.942h.212l.243-.242.985-1.306 1.652-2.064.73-.82.85-.904.547-.431h1.033l.76 1.129-.34 1.166-1.064 1.347-.881 1.142-1.264 1.7-.79 1.36.073.11.188-.02 2.856-.606 1.543-.28 1.841-.315.833.388.091.395-.328.807-1.969.486-2.309.462-3.439.813-.042.03.049.061 1.549.146.662.036h1.622l3.02.225.79.522.474.638-.079.485-1.215.62-1.64-.389-3.829-.91-1.312-.329h-.182v.11l1.093 1.068 2.006 1.81 2.509 2.33.127.578-.322.455-.34-.049-2.205-1.657-.851-.747-1.926-1.62h-.128v.17l.444.649 2.345 3.521.122 1.08-.17.353-.608.213-.668-.122-1.374-1.925-1.415-2.167-1.143-1.943-.14.08-.674 7.254-.316.37-.729.28-.607-.461-.322-.747.322-1.476.389-1.924.315-1.53.286-1.9.17-.632-.012-.042-.14.018-1.434 1.967-2.18 2.945-1.726 1.845-.414.164-.717-.37.067-.662.401-.589 2.388-3.036 1.44-1.882.93-1.086-.006-.158h-.055L4.132 18.56l-1.13.146-.487-.456.061-.746.231-.243 1.908-1.312-.006.006z" fill="#D97757" ></path></svg>
         </div>
         <div class="welcome-label">Good Evening, kitty</div>
-      </div>
-      <section class="input-field">
+      </header>
+      <section class="input-field" aria-label="Message input">
         <div class="input-container">
           <input type="text" placeholder="How can i help you today?">
         </div>
         <div class="actions-container">
-          <div class="additional-actions-container">
-            <div class="attachments-button-container can-focus-additional-action-button">
-              <button>
+          <div class="additional-actions-container" role="toolbar">
+            <div class="attachments-button-container">
+              <button 
+                class="can-focus-additional-action-button"
+                aria-label="Add attachments">
                 <svg width="16px" height="16px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M4 12H20M12 4V20" stroke="#9C9A92" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
             </div>
-            <div class="tools-button-container can-focus-additional-action-button">
-              <button>
+            <div class="tools-button-container">
+              <button 
+                class="can-focus-additional-action-button"
+                aria-label="Configure tools">
                 <svg width="16px" height="16px" viewBox="0 -3.5 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <g stroke="none" stroke-width="1">
                 <g transform="translate(-99.000000, -760.000000)" fill="#9C9A92">
@@ -93,16 +119,20 @@
                 </g></g></g></svg>
               </button>
             </div>
-            <div class="thinking-button-container can-focus-additional-action-button">
-              <button>
+            <div class="thinking-button-container">
+              <button 
+                class="can-focus-additional-action-button"
+                aria-label="Extended thinking">
                 <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
                 <svg fill="#9C9A92" width="16px" height="16px" viewBox="0 0 24 24" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"><path d="M24,12A12,12,0,0,1,0,12a1,1,0,0,1,2,0A10,10,0,1,0,12,2a1,1,0,0,1,0-2A12.013,12.013,0,0,1,24,12ZM10.277,11H8a1,1,0,0,0,0,2h2.277A1.994,1.994,0,1,0,13,10.277V7a1,1,0,0,0-2,0v3.277A2,2,0,0,0,10.277,11ZM1.827,8.784a1,1,0,1,0-1-1A1,1,0,0,0,1.827,8.784ZM4.221,5.207a1,1,0,1,0-1-1A1,1,0,0,0,4.221,5.207ZM7.779,2.841a1,1,0,1,0-1-1A1,1,0,0,0,7.779,2.841Z"/></svg>
               </button>
             </div>
           </div>
           <div class="main-actions-container">
-            <div class="models-button-container can-focus">
-              <button>
+            <div class="models-button-container">
+              <button 
+                class="models-button can-focus"
+                aria-label="Select model">
                 <div class="model-name">Sonnet 4.5</div>
                 <div class="arrow-down-container">
                   <svg width="16px" height="16px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -112,7 +142,9 @@
               </button>
             </div>
             <div class="send-button-container">
-              <button>
+              <button 
+                class="send-button can-focus"
+                aria-label="Send message">
                 <svg width="16px" height="16px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12 3C12.2652 3 12.5196 3.10536 12.7071 3.29289L19.7071 10.2929C20.0976 10.6834 20.0976 11.3166 19.7071 11.7071C19.3166 12.0976 18.6834 12.0976 18.2929 11.7071L13 6.41421V20C13 20.5523 12.5523 21 12 21C11.4477 21 11 20.5523 11 20V6.41421L5.70711 11.7071C5.31658 12.0976 4.68342 12.0976 4.29289 11.7071C3.90237 11.3166 3.90237 10.6834 4.29289 10.2929L11.2929 3.29289C11.4804 3.10536 11.7348 3 12 3Z" fill="#9C9A92"/>
                 </svg>
