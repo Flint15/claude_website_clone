@@ -1,7 +1,14 @@
 :root {
-  --based-font-color: rgb(194, 192, 182);
-  --border-color: rgb(63, 63, 63);
-  --send-button-color: rgba(198, 97, 63, 0.5);
+  --color-bg-primary: rgb(38 38 38);
+  --color-bg-secondary: rgb(23, 23, 23);
+
+  --color-text-primary: rgb(194, 192, 182);
+  --color-text-secondary: rgb(156, 154, 146);
+
+  --color-border: rgb(63, 63, 63);
+
+  --btn-bg-send: rgba(198, 97, 63, 0.5);
+  --input-bg-color: rgb(48, 48, 46);
 }
 
 main {
@@ -33,7 +40,7 @@ main {
 }
 
 .upgrade-plan {
-  background-color: var(--additional-background-color);
+  background-color: var(--color-bg-secondary);
   padding: 7px 13px;
   border-radius: 5px;
   
@@ -59,13 +66,13 @@ main {
 .welcome-label {
   font-size: 38px;
   font-family: serif;
-  color: var(--based-font-color);
+  color: var(--color-text-primary);
 
   margin-left: 12px;
 }
 
 .input-field {
-  background-color: var(--input-field-background);
+  background-color: var(--input-bg-color);
   border-radius: 20px;
   padding: 18px;
 
@@ -92,7 +99,7 @@ main {
 }
 
 .input-container input::placeholder {
-  color: var(--additional-font-color);
+  color: var(--color-text-secondary);
 }
 
 .actions-container {
@@ -109,7 +116,7 @@ main {
 
 .additional-actions-container button {
   background-color: transparent;
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--color-border);
   border-radius: 9px;
 
   display: flex;
@@ -123,7 +130,7 @@ main {
 }
 
 .can-focus-additional-action-button:hover {
-  background-color: var(--background-color);
+  background-color: var(--color-bg-primary);
   border-radius: 9px;
   transition: background-color 0.2s;
 }
@@ -152,11 +159,11 @@ main {
 }
 
 .models-button-container .model-name {
-  color: var(--based-font-color);
+  color: var(--color-text-primary);
 }
 
 .send-button-container button {
-  background-color: var(--send-button-color);
+  background-color: var(--btn-bg-send);
   border: none;
   border-radius: 9px;
 

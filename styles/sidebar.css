@@ -1,11 +1,6 @@
 :root {
-  --additional-background-color: rgb(23, 23, 23);
-  --input-field-background: rgb(48, 48, 46);
-
-  --based-font-color: rgb(194, 192, 182);
-  --additional-font-color: rgb(156, 154, 146);
-
-  --border-color: rgb(63, 63, 63);
+  --color-bg-secondary: rgb(23, 23, 23);
+  --color-border: rgb(63, 63, 63);
 }
 
 body {
@@ -16,7 +11,7 @@ nav {
   width: 48px;
   height: 100vh;
 
-  border-right: 1px solid var(--border-color);
+  border-right: 1px solid var(--color-border);
 
   position: relative;
 }
@@ -58,7 +53,7 @@ nav {
 }
 
 .can-focus:hover {
-  background-color: var(--additional-background-color);
+  background-color: var(--color-bg-secondary);
   border-radius: 6px;
   transition: background-color 0.2s;
 }
