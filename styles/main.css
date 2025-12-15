@@ -101,6 +101,10 @@ main {
   padding: 0px;
 }
 
+.input-container input:focus {
+  outline: none;
+}
+
 .input-container input::placeholder {
   color: var(--color-text-secondary);
 }
