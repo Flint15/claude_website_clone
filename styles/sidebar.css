@@ -16,11 +16,31 @@ body {
   position: relative;
 }
 
+.tooltip {
+  height: 15px;
+
+  background-color: var(--color-bg-thirty);
+  border-radius: 6px;
+
+  padding: 6px;
+
+  color: var(--color-text-thirty);
+  font-size: 13px;
+  font-weight: bold;
+  font-family: sans-serif;
+  white-space: nowrap;
+  pointer-events: none;
+
+  opacity: 0;
+}
+
 .sidebar-button-container {
   padding: 8px;
 }
 
 .sidebar-button {
+  position: relative;
+
   background-color: transparent;
   border: none;
 
@@ -28,6 +48,17 @@ body {
   width: 32px;
 
   cursor: pointer;
+}
+
+.sidebar-button .tooltip {
+  position: absolute;
+  bottom: 4px;
+  left: 38px;
+}
+
+.sidebar-button:hover .tooltip {
+  opacity: 1;
+  transition: opacity 0.2s;
 }
 
 .new-chat-link-container {
@@ -38,8 +69,31 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-
+  
   padding: 5px;
+}
+
+.new-chat-link,
+.chats,
+.projects,
+.artifacts {
+  position: relative;
+}
+
+.new-chat-link .tooltip,
+.chats .tooltip,
+.projects .tooltip,
+.artifacts .tooltip {
+  position: absolute;
+  left: 38px;
+}
+
+.new-chat-link:hover .tooltip,
+.chats:hover .tooltip,
+.projects:hover .tooltip,
+.artifacts:hover .tooltip {
+  opacity: 1;
+  transition: opacity 0.2s;
 }
 
 .new-chat-link-svg-container {
