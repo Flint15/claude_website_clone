@@ -114,14 +114,16 @@ aside.closed .sidebar-button-container {
 .new-chat-link,
 .chats,
 .projects,
-.artifacts {
+.artifacts,
+.code {
   position: relative;
 }
 
 .new-chat-link .tooltip,
 .chats .tooltip,
 .projects .tooltip,
-.artifacts .tooltip {
+.artifacts .tooltip,
+.code .tooltip {
   position: absolute;
   left: 38px;
 }
@@ -129,7 +131,8 @@ aside.closed .sidebar-button-container {
 .new-chat-link:hover .tooltip,
 .chats:hover .tooltip,
 .projects:hover .tooltip,
-.artifacts:hover .tooltip {
+.artifacts:hover .tooltip,
+.code:hover .tooltip {
   opacity: 1;
   transition: opacity 0.2s;
 }
