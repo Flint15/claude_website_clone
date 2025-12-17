@@ -9,7 +9,7 @@
   --color-text-secondary: rgb(156, 154, 146);
   --color-text-thirty: rgb(232, 232, 232);
 
-  --btn-bg-nchat: rgb(214, 118, 83);
+  --btn-bg-primary: rgb(214, 118, 83);
 }
 
 body {
@@ -113,7 +113,7 @@ aside .sidebar-button-container {
 }
 
 .new-chat-link-svg-container {
-  background-color: rgb(214, 118, 83);
+  background-color: var(--btn-bg-primary);
   border-radius: 20px;
 
   padding: 1px;

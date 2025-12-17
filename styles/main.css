@@ -10,7 +10,9 @@
   --color-border-primary: rgb(63, 63, 63);
   --color-border-secondary: rgba(255, 255, 255, 0.04);
 
-  --btn-bg-send: rgba(198, 97, 63, 0.5);
+  --btn-bg-primary: rgb(214, 118, 83);
+  --btn-bg-secondary: rgba(198, 97, 63, 0.5);
+  
   --input-bg-color: rgb(48, 48, 46);
 }
 
@@ -192,7 +194,7 @@ main {
 }
 
 .send-button-container button {
-  background-color: var(--btn-bg-send);
+  background-color: var(--btn-bg-secondary);
   border: none;
   border-radius: 9px;
 
