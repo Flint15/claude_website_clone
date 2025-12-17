@@ -203,5 +203,5 @@ main {
   margin: 0px;
   padding: 8px;
 
-  cursor: pointer;
+  pointer-events: none;
 }
