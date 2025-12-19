@@ -43,7 +43,8 @@ function removeInitialContent() {
 
 function addMessage(message: string): void {
   const html = `
-  <section class="user-message">${message}</section>
+  <div class="user-message">${message}</div>
+  <div class="stretch-container"></div>
   `
   messagesContainer.innerHTML += html
   inputElement.value = ''

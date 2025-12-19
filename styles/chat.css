@@ -1,3 +1,7 @@
+:root {
+  --color-bg-secondary: rgb(23, 23, 23);
+}
+
 .messages-container {
   width: 100%;
 
@@ -5,6 +9,18 @@
   flex-direction: column;
 }
 
-.user-message {
+.user-message,
+.stretch-container {
   align-self: flex-end;
+}
+
+.user-message {
+  background-color: var(--color-bg-secondary);
+  border-radius: 10px;
+
+  padding: 10px 16px;
+}
+
+.stretch-container {
+  height: 30px;
 }
