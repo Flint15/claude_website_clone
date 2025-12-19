@@ -20,5 +20,29 @@ inputElement === null || inputElement === void 0 ? void 0 : inputElement.addEven
             sendSVG.style.fill = '#9C9A92';
     }
 });
+inputElement.addEventListener('keydown', event => {
+    if (event.key === 'Enter') {
+        console.log(inputElement.value);
+        removeInitialContent();
+        addMessage(inputElement.value);
+    }
+});
+const messagesContainer = document.querySelector('.messages-container');
+sendButton === null || sendButton === void 0 ? void 0 : sendButton.addEventListener('click', () => {
+    console.log(inputElement.value);
+    removeInitialContent();
+    addMessage(inputElement.value);
+});
+function removeInitialContent() {
+    var _a;
+    (_a = document.querySelector('.initial-content')) === null || _a === void 0 ? void 0 : _a.remove();
+}
+function addMessage(message) {
+    const html = `
+  <section class="user-message">${message}</section>
+  `;
+    messagesContainer.innerHTML += html;
+    inputElement.value = '';
+}
 export {};
 //# sourceMappingURL=index.js.map
