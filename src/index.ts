@@ -25,7 +25,7 @@ inputElement.addEventListener('keydown', event => {
   if (event.key === 'Enter') {
     console.log(inputElement.value)
     removeInitialContent()
-    addMessage(inputElement.value)
+    addMessage('user', inputElement.value)
   }
 })
 
@@ -34,16 +34,16 @@ const messagesContainer = document.querySelector<HTMLDivElement>('.messages-cont
 sendButton?.addEventListener('click', () => {
   console.log(inputElement.value)
     removeInitialContent()
-    addMessage(inputElement.value)
+    addMessage('user', inputElement.value)
 })
 
 function removeInitialContent() {
   document.querySelector('.initial-content')?.remove()  
 }
 
-function addMessage(message: string): void {
+function addMessage(sender: string, message: string): void {
   const html = `
-  <div class="user-message">${message}</div>
+  <div class="${sender}-message">${message}</div>
   <div class="stretch-container"></div>
   `
   messagesContainer.innerHTML += html

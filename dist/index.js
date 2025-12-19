@@ -24,22 +24,22 @@ inputElement.addEventListener('keydown', event => {
     if (event.key === 'Enter') {
         console.log(inputElement.value);
         removeInitialContent();
-        addMessage(inputElement.value);
+        addMessage('user', inputElement.value);
     }
 });
 const messagesContainer = document.querySelector('.messages-container');
 sendButton === null || sendButton === void 0 ? void 0 : sendButton.addEventListener('click', () => {
     console.log(inputElement.value);
     removeInitialContent();
-    addMessage(inputElement.value);
+    addMessage('user', inputElement.value);
 });
 function removeInitialContent() {
     var _a;
     (_a = document.querySelector('.initial-content')) === null || _a === void 0 ? void 0 : _a.remove();
 }
-function addMessage(message) {
+function addMessage(sender, message) {
     const html = `
-  <div class="user-message">${message}</div>
+  <div class="${sender}-message">${message}</div>
   <div class="stretch-container"></div>
   `;
     messagesContainer.innerHTML += html;
