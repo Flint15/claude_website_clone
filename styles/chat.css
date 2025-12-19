@@ -1,5 +1,7 @@
 :root {
   --color-bg-secondary: rgb(23, 23, 23);
+
+  --color-text-thirty: rgb(232, 232, 232);
 }
 
 .messages-container {
@@ -14,6 +16,17 @@
   align-self: flex-end;
 }
 
+.stretch-container {
+  height: 30px;
+}
+
+.user-message,
+.llm-message {
+  font-family: sans-serif;
+  font-size: 16px;
+  color: var(--color-text-thirty);
+}
+
 .user-message {
   background-color: var(--color-bg-secondary);
   border-radius: 10px;
@@ -21,6 +34,7 @@
   padding: 10px 16px;
 }
 
-.stretch-container {
-  height: 30px;
+.llm-message {
+  padding-left: 8px;
+  padding-right: 32px;
 }
