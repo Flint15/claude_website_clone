@@ -124,8 +124,13 @@ aside .sidebar-button-container {
 
 .chats-container {
   margin-top: 16px;
+
+  height: 595px;
   
   padding: 0px 8px;
+
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .chat {
