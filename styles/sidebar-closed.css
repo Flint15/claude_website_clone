@@ -1,6 +1,7 @@
 aside.closed .sidebar-claude-link, 
 aside.closed .navigation-label, 
-aside.closed .user-profile-infos {
+aside.closed .user-profile-infos,
+aside.closed .chats-container {
   display: none;
   transition: display 2s;
 }

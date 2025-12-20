@@ -122,6 +122,27 @@ aside .sidebar-button-container {
   width: 22px;
 }
 
+.chats-container {
+  margin-top: 16px;
+  
+  padding: 0px 8px;
+}
+
+.chat {
+  padding: 8px;
+
+  color: var(--color-text-primary);
+  font-size: 15px;
+  font-family: sans-serif;
+
+  cursor: pointer;
+}
+
+.chat:hover {
+  color: var(--color-text-thirty);
+  transition: color 0.2s;
+}
+
 .can-focus:hover {
   background-color: var(--color-bg-secondary);
   border-radius: 6px;
