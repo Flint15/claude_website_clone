@@ -46,6 +46,13 @@ aside .sidebar-button-container {
   right: 10px;
 }
 
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+}
+
 .sidebar-title {
   display: flex;
   align-items: center;
@@ -78,6 +85,10 @@ aside .sidebar-button-container {
   cursor: pointer;
 
   z-index: 1007;
+}
+
+.sidebar-actions-container {
+  height: 179px;
 }
 
 .new-chat-link-container {
@@ -125,7 +136,7 @@ aside .sidebar-button-container {
 .chats-container {
   margin-top: 16px;
 
-  height: 595px;
+  flex: 1;
   
   padding: 0px 8px;
 
@@ -167,8 +178,8 @@ aside .sidebar-button-container {
 }
 
 .user {
-  position: absolute;
-  bottom: 0px;
+  height: 76px;
+  width: fit-content;
 }
 
 .user-button {
@@ -178,10 +189,11 @@ aside .sidebar-button-container {
 
   padding: 16px 16px;
 
-  width: 313px;
+  width: fit-content;
 
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 15px;
 
   cursor: pointer;

@@ -12,10 +12,17 @@ aside.closed .sidebar-button-container {
   left: 10px;
 }
 
-aside.closed .user-profile-pic {
+aside.closed .user {
   position: fixed;
   bottom: 15px;
   left: 5px;
+
+  width: fit-content;
+  height: fit-content;
+}
+
+aside.closed .user button {
+  padding: 0px;
 }
 
 aside.closed .user-button {
