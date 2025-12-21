@@ -1,3 +1,4 @@
+import { addMessage, removeInitialContent } from "./index.js";
 const storedChats = localStorage.getItem('chats');
 export const chats = storedChats
     ? JSON.parse(storedChats)
@@ -19,6 +20,20 @@ export const currentChatId = url.get('chat_id')
         localStorage.getItem('currentNewChatId')
     ||
         chats[0]?.id;
+chats.forEach(chat => {
+    if (chat.id === currentChatId) {
+        if (chat.messages.length !== 0) {
+            removeInitialContent();
+            renderMessages(chat.messages);
+            return;
+        }
+    }
+});
+function renderMessages(messages) {
+    messages.forEach(message => {
+        addMessage(message.sender, message.message, true);
+    });
+}
 const chatsContainer = document.querySelector('.chats-container');
 let html = '';
 chats.toReversed().forEach(chat => {

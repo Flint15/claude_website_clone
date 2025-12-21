@@ -36,10 +36,10 @@ sendButton?.addEventListener('click', () => {
     addMessage('user', userMessage);
     addMessage('llm', createLLMResponse(userMessage));
 });
-function removeInitialContent() {
+export function removeInitialContent() {
     document.querySelector('.initial-content')?.remove();
 }
-function addMessage(sender, message) {
+export function addMessage(sender, message, renderExistedMessages = false) {
     liftMessagesFlag();
     const html = `
   <div class="${sender}-message">${message}</div>
@@ -47,6 +47,9 @@ function addMessage(sender, message) {
   `;
     messagesContainer.innerHTML += html;
     inputElement.value = '';
+    if (renderExistedMessages) {
+        return;
+    }
     chats.forEach(chat => {
         if (chat.id === currentChatId) {
             console.log(chat);

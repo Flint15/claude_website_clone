@@ -41,11 +41,11 @@ sendButton?.addEventListener('click', () => {
   addMessage('llm', createLLMResponse(userMessage))
   })
 
-function removeInitialContent() {
+export function removeInitialContent() {
   document.querySelector('.initial-content')?.remove()  
 }
 
-function addMessage(sender: string, message: string): void {
+export function addMessage(sender: string, message: string, renderExistedMessages: boolean = false): void {
   liftMessagesFlag()
   
   const html = `
@@ -54,6 +54,10 @@ function addMessage(sender: string, message: string): void {
   `
   messagesContainer.innerHTML += html
   inputElement.value = ''
+
+  if (renderExistedMessages) {
+    return
+  }
 
   chats.forEach(chat => {
     if (chat.id === currentChatId) {

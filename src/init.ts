@@ -1,3 +1,5 @@
+import { addMessage, removeInitialContent } from "./index.js"
+
 interface Message {
   sender: string
   message: string
@@ -34,6 +36,22 @@ export const currentChatId = url.get('chat_id')
 localStorage.getItem('currentNewChatId')
   ||
 chats[0]?.id
+
+chats.forEach(chat => {
+  if (chat.id === currentChatId) {
+    if (chat.messages.length !== 0) {
+      removeInitialContent()
+      renderMessages(chat.messages)
+      return
+    }
+  }
+})
+
+function renderMessages(messages: Message[]) {
+  messages.forEach(message => {
+    addMessage(message.sender, message.message, true)
+  })
+}
 
 const chatsContainer = document.querySelector<HTMLDivElement>('.chats-container')
 
