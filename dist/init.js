@@ -7,8 +7,7 @@ export const chats = storedChats
             messages: []
         }];
 console.log(chats);
-// Define did messages was sended in the current chat or not
-// If chat is new => storedMessagesFlag = false, storedMessagesFlag = true otherwise
+// Means that messages were't sended yet
 export let messagesFlag = false;
 export function liftMessagesFlag() {
     messagesFlag = true;
