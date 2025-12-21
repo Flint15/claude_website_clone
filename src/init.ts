@@ -12,7 +12,9 @@ const chatsContainer = document.querySelector<HTMLDivElement>('.chats-container'
 
 let html = ''
 chats.forEach(chat => {
-  html += `<div class="chat can-focus">${chat.name}</div>`
+  html += `
+    <a class="chat can-focus" href="./new.html">${chat.name}</a>
+  `
 })
 
 if (chatsContainer) {
