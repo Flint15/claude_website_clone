@@ -10,7 +10,7 @@ console.log(chats);
 // Define did messages was sended in the current chat or not
 // If chat is new => storedMessagesFlag = false, storedMessagesFlag = true otherwise
 const storedMessagesFlag = localStorage.getItem('messagesFlag');
-let messagesFlag;
+export let messagesFlag;
 if (storedMessagesFlag === 'true') {
     messagesFlag = true;
 }

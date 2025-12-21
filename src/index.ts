@@ -1,4 +1,4 @@
-import { chats, liftMessagesFlag } from "./init.js"
+import { chats, liftMessagesFlag, messagesFlag } from "./init.js"
 
 const sidebarButton = document.getElementById('ts-sidebar-button')
 const sidebarElement = document.querySelector('aside')
@@ -65,7 +65,10 @@ const newChatButton = document.querySelector<HTMLButtonElement>('.new-chat-link'
 newChatButton?.addEventListener('click', () => {
   const chatsQuantity = chats.length
 
+  if (!messagesFlag) {
+    return
+  }
+  
   chats.push({ name: `chat_${chatsQuantity}`, id: crypto.randomUUID(), messages: []})
-
   localStorage.setItem('chats', JSON.stringify(chats))
 })
