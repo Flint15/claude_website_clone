@@ -1,11 +1,21 @@
-# Claude Clone - AI Chat Interface
+# Claude Clone
+*Inspired by [Claude](https://claude.ai/new)*
 
-A modern chat interface inspired by Claude AI
+A front-end clone of the Claude AI. Project replicate the visual design and basic functionality of Claude's chat interface.
 
 ## Features
 
-- Toggle Sidebar
-- Dark Theme
+- **Responsive sidebar**
+- **Smooth animations and hover effects**
+- **Tooltip system**
+- **Multiple chat sessions**
+- **Persisted message history**
+- **Messages rendering**
+
+## Prerequisites
+
+1. Node.js and npm
+2. TypeScript
 
 ## Getting started
 
@@ -17,3 +27,4 @@ Technologies
 - HTML
 - CSS
 - TypeScript
+- localStorage
