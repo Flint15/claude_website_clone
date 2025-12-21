@@ -34,7 +34,7 @@ export const chatId = url.get('chat_id')
 const chatsContainer = document.querySelector<HTMLDivElement>('.chats-container')
 
 let html = ''
-chats.forEach(chat => {
+chats.toReversed().forEach(chat => {
   html += `
     <a class="chat can-focus" href="./new.html?chat_id=${chat.id}">
       ${chat.name}
