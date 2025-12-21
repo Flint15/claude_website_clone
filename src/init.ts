@@ -22,13 +22,7 @@ console.log(chats)
 
 // Define did messages was sended in the current chat or not
 // If chat is new => storedMessagesFlag = false, storedMessagesFlag = true otherwise
-const storedMessagesFlag = localStorage.getItem('messagesFlag')
-export let messagesFlag: boolean
-if (storedMessagesFlag === 'true') {
-  messagesFlag = true
-} else {
-  messagesFlag = false
-}
+export let messagesFlag: boolean = false
 
 export function liftMessagesFlag() {
   messagesFlag = true
@@ -37,8 +31,6 @@ export function liftMessagesFlag() {
 
 const url = new URLSearchParams(window.location.search)
 export const chatId = url.get('chat_id')
-
-const storedChat = localStorage.getItem('chat')
 
 const chatsContainer = document.querySelector<HTMLDivElement>('.chats-container')
 
