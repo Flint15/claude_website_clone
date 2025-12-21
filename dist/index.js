@@ -55,7 +55,7 @@ function createLLMResponse(message) {
 const newChatButton = document.querySelector('.new-chat-link');
 newChatButton === null || newChatButton === void 0 ? void 0 : newChatButton.addEventListener('click', () => {
     const chatsQuantity = chats.length;
-    chats.push({ name: `chat_${chatsQuantity}`, id: crypto.randomUUID() });
+    chats.push({ name: `chat_${chatsQuantity}`, id: crypto.randomUUID(), messages: [] });
     localStorage.setItem('chats', JSON.stringify(chats));
 });
 //# sourceMappingURL=index.js.map
