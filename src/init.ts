@@ -5,16 +5,15 @@ interface Message {
   message: string
 }
 
-interface Chats {
+export interface Chat {
   id: string
   name: string
   messages: Message[]
 }
 
 const storedChats = localStorage.getItem('chats')
-
-export const chats: Chats[] = storedChats
-? (JSON.parse(storedChats) as Chats[])
+export const chats: Chat[] = storedChats
+? (JSON.parse(storedChats) as Chat[])
 : [{ 
   id: crypto.randomUUID(),
   name: 'blue',
@@ -37,15 +36,18 @@ localStorage.getItem('currentNewChatId')
   ||
 chats[0]?.id
 
-chats.forEach(chat => {
-  if (chat.id === currentChatId) {
-    if (chat.messages.length !== 0) {
-      removeInitialContent()
-      renderMessages(chat.messages)
-      return
+renderCurrentChatHistory()
+function renderCurrentChatHistory() {
+  chats.forEach(chat => {
+    if (chat.id === currentChatId) {
+      if (chat.messages.length !== 0) {
+        removeInitialContent()
+        renderMessages(chat.messages)
+        return
+      }
     }
-  }
-})
+  })
+}
 
 function renderMessages(messages: Message[]) {
   messages.forEach(message => {
@@ -53,19 +55,20 @@ function renderMessages(messages: Message[]) {
   })
 }
 
-const chatsContainer = document.querySelector<HTMLDivElement>('.chats-container')
-
-let html = ''
-chats.toReversed().forEach(chat => {
-  html += `
-    <a
-      class="chat can-focus ${chat.id === currentChatId ? 'current-chat': ''}"
-      href="./new.html?chat_id=${chat.id}">
-      ${chat.name}
-    </a>
-  `
-})
-
-if (chatsContainer) {
-  chatsContainer.innerHTML = html
+renderChats()
+function renderChats() {
+  const chatsContainer = document.querySelector<HTMLDivElement>('.chats-container')
+  let html = ''
+  chats.toReversed().forEach(chat => {
+    html += `
+      <a
+        class="chat can-focus ${chat.id === currentChatId ? 'current-chat': ''}"
+        href="./new.html?chat_id=${chat.id}">
+        ${chat.name}
+      </a>
+    `
+  }) 
+  if (chatsContainer) {
+    chatsContainer.innerHTML = html
+  }
 }

@@ -2,12 +2,12 @@ interface Message {
     sender: string;
     message: string;
 }
-interface Chats {
+export interface Chat {
     id: string;
     name: string;
     messages: Message[];
 }
-export declare const chats: Chats[];
+export declare const chats: Chat[];
 export declare let messagesFlag: boolean;
 export declare function liftMessagesFlag(): void;
 export declare const currentChatId: string | undefined;
