@@ -1,3 +1,12 @@
+:root {
+  --color-text-primary: rgb(194, 192, 182);
+  --color-text-thirty: rgb(232, 232, 232);
+  
+  --color-bg-secondary: rgb(23, 23, 23);
+  
+  --color-border-primary: rgb(63, 63, 63);
+}
+
 .chats-container {
   margin-top: 16px;
 
@@ -14,6 +23,8 @@
 }
 
 .chat-container {
+  position: relative;
+
   display: flex;
 }
 
@@ -31,9 +42,13 @@ a.chat {
   cursor: pointer;
 }
 
-a.chat.current-chat {
+.current-chat {
   background-color: var(--color-bg-secondary);
   border-radius: 6px;
+}
+
+.current-chat .chat-settings {
+  opacity: 1;
 }
 
 .chat:hover {
@@ -50,8 +65,21 @@ a.chat.current-chat {
   cursor: pointer;
 }
 
-.chat-settings.can-focus:hover {
+.chat-settings:hover {
   opacity: 1;
+  background-color: var(--color-bg-secondary);
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.chat-container:has(.chat:hover) .chat-settings{
+  opacity: 1;
+}
+
+.can-focus:hover {
+  background-color: var(--color-bg-secondary);
+  border-radius: 6px;
+  transition: background-color 0.2s;
 }
 
 .chat-container:has(.chat:hover){
@@ -60,6 +88,33 @@ a.chat.current-chat {
   transition: background-color 0.2s;
 }
 
-.chat-container:has(.chat:hover) .chat-settings{
-  opacity: 1;
+.dropdown-menu {
+  position: absolute;
+  right: 0px;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: rgb(48, 48, 46);
+  border: 1px solid var(--color-border-primary);
+
+  padding: 6px;
+}
+
+.dropdown-menu button {
+  background-color: transparent;
+  border: none;
+
+  display: flex;
+  align-items: center;
+
+  padding: 6px 8px;
+
+  color: var(--color-text-primary);
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+.dropdown-menu button svg {
+  margin-right: 10px;
 }
