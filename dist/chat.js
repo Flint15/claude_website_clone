@@ -74,6 +74,7 @@ function addRenameChatButtonsListeners() {
     document.querySelector('.save-rename')
         ?.addEventListener('click', () => {
         changeChatName(currentRenameChatId, renameInput?.value);
+        renameInput.value = '';
         renameOverlay?.classList.remove('active');
     });
 }

@@ -84,6 +84,7 @@ function addRenameChatButtonsListeners() {
   document.querySelector('.save-rename')
     ?.addEventListener('click', () => {
       changeChatName(currentRenameChatId, renameInput?.value as string)
+      renameInput!.value = ''
       renameOverlay?.classList.remove('active')
     })
 }
