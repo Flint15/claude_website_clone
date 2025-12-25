@@ -1,19 +1,19 @@
 import { addChatSettingsListener, addRenameChatListener, removeInitialContent, renderMessage } from "./chat.js"
 import { chats, currentChatId, changeCurrentChatId } from "./init.js"
 
-export function createNewChat() {
+export function createNewChat(chatName: string) {
   const chatId = crypto.randomUUID()
   window.history.replaceState({}, "", `?chat-id=${chatId}`)
   changeCurrentChatId(chatId)
 
-  storedNewChat(chatId)
+  storedNewChat(chatId, chatName)
   renderChats()
 }
 
-function storedNewChat(chatId: string) {
+function storedNewChat(chatId: string, chatName: string) {
   chats.push({
     chatId,
-    name: `chat_${chats.length}`,
+    name: chatName,
     messages: []
   })
   storeChats()

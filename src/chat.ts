@@ -94,7 +94,7 @@ function displayMessages(message: string) {
   if (!messagesFlag) {
     liftMessagesFlag()
     removeInitialContent()
-    createNewChat()
+    createNewChat(message.split(' ')[0] as string)
     console.log('Messages were sended')
   } else {
     console.log('Messages were already sended before')

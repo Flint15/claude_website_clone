@@ -83,7 +83,7 @@ function displayMessages(message) {
     if (!messagesFlag) {
         liftMessagesFlag();
         removeInitialContent();
-        createNewChat();
+        createNewChat(message.split(' ')[0]);
         console.log('Messages were sended');
     }
     else {
