@@ -5,6 +5,9 @@
   --color-bg-secondary: rgb(23, 23, 23);
   
   --color-border-primary: rgb(63, 63, 63);
+  --color-border-secondary: rgba(222, 220, 209, 0.3);
+
+  --color-btn-delete: rgb(254, 129, 129);
 }
 
 .chats-container {
@@ -47,7 +50,7 @@ a.chat {
   border-radius: 6px;
 }
 
-.current-chat .chat-settings {
+.current-chat .chat-settings-button {
   opacity: 1;
 }
 
@@ -56,7 +59,7 @@ a.chat {
   transition: color 0.2s;
 }
 
-.chat-settings {
+.chat-settings-button {
   background-color: transparent;
   border: none;
 
@@ -65,14 +68,15 @@ a.chat {
   cursor: pointer;
 }
 
-.chat-settings:hover {
+.chat-settings-button.active,
+.chat-settings-button:hover {
   opacity: 1;
   background-color: var(--color-bg-secondary);
   border-radius: 6px;
   transition: background-color 0.2s;
 }
 
-.chat-container:has(.chat:hover) .chat-settings{
+.chat-container:has(.chat:hover) .chat-settings-button{
   opacity: 1;
 }
 
@@ -91,14 +95,27 @@ a.chat {
 .dropdown-menu {
   position: absolute;
   right: 0px;
-
-  display: flex;
-  flex-direction: column;
+  top: 40px;
 
   background-color: rgb(48, 48, 46);
-  border: 1px solid var(--color-border-primary);
+  border: 1px solid var(--color-border-secondary);
+  border-radius: 10px;
+
+  display: none;
+  opacity: 0;
 
   padding: 6px;
+
+  z-index: 1000;
+}
+
+.dropdown-menu.active {
+  display: block;
+  opacity: 1;
+}
+
+.dropdown-menu.active {
+  opacity: 1;
 }
 
 .dropdown-menu button {
@@ -108,7 +125,9 @@ a.chat {
   display: flex;
   align-items: center;
 
-  padding: 6px 8px;
+  width: 150px;
+
+  padding: 8px;
 
   color: var(--color-text-primary);
   font-size: 16px;
@@ -117,4 +136,13 @@ a.chat {
 
 .dropdown-menu button svg {
   margin-right: 10px;
+}
+
+.drowpdown-menu-item-button {
+  cursor: pointer;
+}
+
+#delete-chat-button {
+  border-top: 1px solid var(--color-border-primary);
+  color: var(--color-btn-delete);
 }

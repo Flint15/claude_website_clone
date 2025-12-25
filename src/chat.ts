@@ -1,16 +1,15 @@
-import { createNewChat, currentChatId, storeMessage } from "./chats.js"
+import { createNewChat, storeMessage } from "./chats.js"
 import { liftMessagesFlag, messagesFlag } from "./flags.js"
+import { currentChatId } from "./init.js"
 import { createLLMResponse } from "./llm.js"
 
 const inputElement = document.querySelector<HTMLInputElement>('#input-element')
 const sendButton = document.querySelector('.send-button')
 const sendSVG = document.querySelector<SVGPathElement>('.arrow-icon path')
 const messagesContainer = document.querySelector<HTMLDivElement>('.messages-container')!
-const chatSettings = document.querySelector('chat-settings')
 
 addInputElementListeners()
 addSendButtonListener()
-addChatSettingsListener()
 
 function addInputElementListeners() {
   inputElement?.addEventListener('input', () => {
@@ -38,10 +37,22 @@ function addSendButtonListener() {
     })
 }
 
-function addChatSettingsListener() {
-  chatSettings?.addEventListener('click', () => {
-    console.log('Love')
+export function addChatSettingsListener() {
+  const chatSettings = document.querySelectorAll('.chat-settings-button')
+  
+  chatSettings.forEach(settings => {
+    settings.addEventListener('click', () => {
+      const setting = settings as HTMLButtonElement
+      const settingsChatId = setting.dataset.buttonChatId
+      const drowpdownMenu = document
+        .querySelector(`.dropdown-menu-chat-id-${settingsChatId}`)
+
+      settings.classList.toggle('active')
+      drowpdownMenu?.classList.toggle('active')
+    })
   })
+
+  console.log('Chat settings listeners were added')
 }
 
 function displayMessages(message: string) {

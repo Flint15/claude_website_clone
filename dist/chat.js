@@ -1,14 +1,13 @@
-import { createNewChat, currentChatId, storeMessage } from "./chats.js";
+import { createNewChat, storeMessage } from "./chats.js";
 import { liftMessagesFlag, messagesFlag } from "./flags.js";
+import { currentChatId } from "./init.js";
 import { createLLMResponse } from "./llm.js";
 const inputElement = document.querySelector('#input-element');
 const sendButton = document.querySelector('.send-button');
 const sendSVG = document.querySelector('.arrow-icon path');
 const messagesContainer = document.querySelector('.messages-container');
-const chatSettings = document.querySelector('chat-settings');
 addInputElementListeners();
 addSendButtonListener();
-addChatSettingsListener();
 function addInputElementListeners() {
     inputElement?.addEventListener('input', () => {
         if (inputElement.value && !sendButton?.classList.contains('active')) {
@@ -35,10 +34,19 @@ function addSendButtonListener() {
         displayMessages(userMessage);
     });
 }
-function addChatSettingsListener() {
-    chatSettings?.addEventListener('click', () => {
-        console.log('Love');
+export function addChatSettingsListener() {
+    const chatSettings = document.querySelectorAll('.chat-settings-button');
+    chatSettings.forEach(settings => {
+        settings.addEventListener('click', () => {
+            const setting = settings;
+            const settingsChatId = setting.dataset.buttonChatId;
+            const drowpdownMenu = document
+                .querySelector(`.dropdown-menu-chat-id-${settingsChatId}`);
+            settings.classList.toggle('active');
+            drowpdownMenu?.classList.toggle('active');
+        });
     });
+    console.log('Chat settings listeners were added');
 }
 function displayMessages(message) {
     console.log(currentChatId);

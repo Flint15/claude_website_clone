@@ -44,6 +44,8 @@ aside .sidebar-button-container {
   position: absolute;
   top: 13px;
   right: 10px;
+
+  z-index: 101;
 }
 
 .sidebar-content {
