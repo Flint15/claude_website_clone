@@ -7,9 +7,11 @@ const inputElement = document.querySelector<HTMLInputElement>('#input-element')
 const sendButton = document.querySelector('.send-button')
 const sendSVG = document.querySelector<SVGPathElement>('.arrow-icon path')
 const messagesContainer = document.querySelector<HTMLDivElement>('.messages-container')!
+const renameOverlay = document.querySelector('.rename-overlay-container')
 
 addInputElementListeners()
 addSendButtonListener()
+addRenameChatButtonsListeners()
 
 function addInputElementListeners() {
   inputElement?.addEventListener('input', () => {
@@ -38,21 +40,40 @@ function addSendButtonListener() {
 }
 
 export function addChatSettingsListener() {
-  const chatSettings = document.querySelectorAll('.chat-settings-button')
-  
-  chatSettings.forEach(settings => {
-    settings.addEventListener('click', () => {
-      const setting = settings as HTMLButtonElement
-      const settingsChatId = setting.dataset.buttonChatId
-      const drowpdownMenu = document
-        .querySelector(`.dropdown-menu-chat-id-${settingsChatId}`)
+  document.querySelectorAll('.chat-settings-button')
+    .forEach(settings => {
+      settings.addEventListener('click', () => {
+        const setting = settings as HTMLButtonElement
+        const settingsChatId = setting.dataset.buttonChatId
+        const drowpdownMenu = document
+          .querySelector(`.dropdown-menu-chat-id-${settingsChatId}`)
 
-      settings.classList.toggle('active')
-      drowpdownMenu?.classList.toggle('active')
+        settings.classList.toggle('active')
+        drowpdownMenu?.classList.toggle('active')
+      })
     })
-  })
-
   console.log('Chat settings listeners were added')
+}
+
+export function addRenameChatListener() {
+  document.querySelectorAll('.rename-chat-button')
+    .forEach(button => {
+      button.addEventListener('click', () => {
+        displayRenameOverlay()      
+      })
+    })
+  console.log('Listeners for rename buttons were added')
+}
+
+function displayRenameOverlay() {
+  renameOverlay?.classList.add('active')
+}
+
+function addRenameChatButtonsListeners() {
+  document.querySelector('.cancel-rename')
+    ?.addEventListener('click', () => {
+      renameOverlay?.classList.remove('active')
+    })
 }
 
 function displayMessages(message: string) {

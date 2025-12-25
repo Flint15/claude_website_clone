@@ -6,8 +6,10 @@ const inputElement = document.querySelector('#input-element');
 const sendButton = document.querySelector('.send-button');
 const sendSVG = document.querySelector('.arrow-icon path');
 const messagesContainer = document.querySelector('.messages-container');
+const renameOverlay = document.querySelector('.rename-overlay-container');
 addInputElementListeners();
 addSendButtonListener();
+addRenameChatButtonsListeners();
 function addInputElementListeners() {
     inputElement?.addEventListener('input', () => {
         if (inputElement.value && !sendButton?.classList.contains('active')) {
@@ -35,8 +37,8 @@ function addSendButtonListener() {
     });
 }
 export function addChatSettingsListener() {
-    const chatSettings = document.querySelectorAll('.chat-settings-button');
-    chatSettings.forEach(settings => {
+    document.querySelectorAll('.chat-settings-button')
+        .forEach(settings => {
         settings.addEventListener('click', () => {
             const setting = settings;
             const settingsChatId = setting.dataset.buttonChatId;
@@ -47,6 +49,24 @@ export function addChatSettingsListener() {
         });
     });
     console.log('Chat settings listeners were added');
+}
+export function addRenameChatListener() {
+    document.querySelectorAll('.rename-chat-button')
+        .forEach(button => {
+        button.addEventListener('click', () => {
+            displayRenameOverlay();
+        });
+    });
+    console.log('Listeners for rename buttons were added');
+}
+function displayRenameOverlay() {
+    renameOverlay?.classList.add('active');
+}
+function addRenameChatButtonsListeners() {
+    document.querySelector('.cancel-rename')
+        ?.addEventListener('click', () => {
+        renameOverlay?.classList.remove('active');
+    });
 }
 function displayMessages(message) {
     console.log(currentChatId);
