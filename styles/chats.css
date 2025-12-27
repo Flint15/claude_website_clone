@@ -1,5 +1,6 @@
 :root {
   --color-text-primary: rgb(194, 192, 182);
+  --color-text-secondary: rgb(156, 154, 146);
   --color-text-thirty: rgb(232, 232, 232);
   
   --color-bg-primary: rgb(38 38 38);
@@ -15,6 +16,17 @@
   --color-text-btn-save-rename: rgb(0, 0, 0);
 }
 
+.recents-chats-label {
+  font-size: 12px;
+  font-family: sans-serif;
+  color: var(--color-text-secondary);
+
+  padding: 0px 8px 8px;
+  margin: 4px 0px 0px;
+
+  user-select: none;
+}
+
 .sidebar-content .chats {
   flex: 1;
   overflow-y: auto;
@@ -23,9 +35,7 @@
   width: 100%;
 }
 
-.chats-container {
-  margin-top: 16px;
-  
+.chats-container {  
   padding: 0px;
 
   display: flex;
