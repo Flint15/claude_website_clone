@@ -72,6 +72,17 @@ export function addDeleteChatListener() {
         });
     });
 }
+export function addToProjectButtonListener() {
+    document.querySelectorAll('#add-to-project-button')
+        .forEach(button => {
+        button.addEventListener('click', () => {
+            alert(`
+          Functionality for this didn\'t developed
+          and on the moment there are no plans
+          `);
+        });
+    });
+}
 function displayRenameOverlay() {
     renameOverlay?.classList.add('active');
 }
