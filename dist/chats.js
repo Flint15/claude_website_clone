@@ -1,5 +1,6 @@
 import { addChatSettingsListener, addDeleteChatListener, addRenameChatListener, addToProjectButtonListener, removeInitialContent, renderMessage } from "./chat.js";
 import { chats, currentChatId, changeCurrentChatId } from "./init.js";
+const chatsContainer = document.querySelector('.chats-container');
 export function createNewChat(chatName) {
     const chatId = crypto.randomUUID();
     window.history.replaceState({}, "", `?chat-id=${chatId}`);
@@ -16,7 +17,9 @@ function storedNewChat(chatId, chatName) {
     storeChats();
 }
 export function renderChats() {
-    const chatsContainer = document.querySelector('.chats-container');
+    if (chats.length === 0) {
+        return;
+    }
     let html = ``;
     chats.toReversed().forEach(chat => {
         html += `
