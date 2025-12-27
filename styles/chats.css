@@ -19,12 +19,14 @@
   flex: 1;
   overflow-y: auto;
   overflow-x: hidden;
+
+  width: 100%;
 }
 
 .chats-container {
   margin-top: 16px;
   
-  padding: 0px 8px;
+  padding: 0px;
 
   display: flex;
   flex-direction: column;

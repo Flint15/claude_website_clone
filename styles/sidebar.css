@@ -35,6 +35,9 @@ aside {
 
   border-right: 1px solid var(--color-border-primary);
 
+  display: flex;
+  flex-direction: column;
+
   position: fixed;
 
   z-index: 101;
@@ -52,6 +55,8 @@ aside .sidebar-button-container {
   display: flex;
   flex-direction: column;
 
+  padding: 0px 8px;
+
   height: 100%;
 }
 
@@ -66,7 +71,7 @@ aside .sidebar-button-container {
 }
 
 .sidebar-title a {
-  padding-left: 16px;
+  padding-left: 8px;
 }
 
 .sidebar-button-container {
@@ -94,7 +99,7 @@ aside .sidebar-button-container {
 }
 
 .new-chat-link-container {
-  padding: 8px 8px 0px 8px;
+  padding: 0px;
 }
 
 .new-chat-link {
@@ -111,17 +116,25 @@ aside .sidebar-button-container {
   color: var(--color-text-primary);
   font-family: sans-serif;
   
+  flex: 1;
+
   margin-left: 10px;
 
   width: 250px;
   height: 20px;
 }
 
+nav {
+  width: fit-content;
+}
+
 .new-chat-link,
+.chats,
 .projects,
 .artifacts,
 .code {
   position: relative;
+  width: fit-content;
 }
 
 .new-chat-link-svg-container {
@@ -141,7 +154,7 @@ aside .sidebar-button-container {
 }
 
 .sidebar-navigation {
-  padding: 1px 8px 0px 8px;
+  padding: 1px 0px 0px 0px;
 }
 
 .navigation-icon-container {
@@ -149,12 +162,13 @@ aside .sidebar-button-container {
   align-items: center;
   justify-content: center;
 
+  width: fit-content;
+
   padding: 6px;
 }
 
 .user {
   height: 76px;
-  width: fit-content;
 }
 
 .user-button {
@@ -164,7 +178,7 @@ aside .sidebar-button-container {
 
   padding: 16px 16px;
 
-  width: fit-content;
+  width: 100%;
 
   display: flex;
   align-items: center;
@@ -180,7 +194,7 @@ aside .sidebar-button-container {
 }
 
 .user-profile-pic {
-  height: 43px;
+  height: 40px;
 
   border-radius: 20px;
 
@@ -205,11 +219,12 @@ aside .sidebar-button-container {
 
 .user-name {
   color: var(--color-text-primary);
-  font-size: 16px;
+  font-size: 15px;
   font-family: sans-serif;
 }
 
 .user-plan {
   color: var(--color-text-secondary);
   font-family: sans-serif;
+  font-size: 13px;
 }
