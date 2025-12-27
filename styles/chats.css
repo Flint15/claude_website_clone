@@ -15,15 +15,16 @@
   --color-text-btn-save-rename: rgb(0, 0, 0);
 }
 
-.chats-container {
-  margin-top: 16px;
-
+.sidebar-content .chats {
   flex: 1;
-  
-  padding: 0px 8px;
-
   overflow-y: auto;
   overflow-x: hidden;
+}
+
+.chats-container {
+  margin-top: 16px;
+  
+  padding: 0px 8px;
 
   display: flex;
   flex-direction: column;
