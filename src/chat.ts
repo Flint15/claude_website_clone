@@ -28,7 +28,7 @@ function addInputElementListeners() {
   })
 
   inputElement?.addEventListener('keydown', event => {
-    if (event.key === 'Enter') {
+    if (event.key === 'Enter' && inputElement.value !== '') {
       const userMessage = inputElement.value
       displayMessages(userMessage)
     }
