@@ -40,7 +40,7 @@ A front-end clone of the Claude AI. Project replicate the visual design and basi
 ### Prerequisites
 
 * Node.js and npm (for TypeScript compilation)
-* Python 3.7+
+* Python ≥ 3.9
 
 ### Installation
 
