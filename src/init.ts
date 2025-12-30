@@ -25,6 +25,10 @@ export let chats: Chat[] = storedChats
 console.log(chats)
 
 renderChats()
+if (currentChatId) {
+  renderMessages(currentChatId)
+  liftMessagesFlag()
+}
 
 export function deleteChatFromChats(chatId: string) {
   chats = chats.filter(chat => chat.chatId !== chatId)
@@ -38,16 +42,6 @@ export function deleteChatFromChats(chatId: string) {
   }
 }
 
-export function addStarredChat(starredChat: Chat[]) {
-
-}
-
 export function changeCurrentChatId(chatId: string) {
   currentChatId = chatId
 }
-
-if (url.get('chat-id')) {
-  renderMessages(currentChatId)
-  liftMessagesFlag()
-}
-

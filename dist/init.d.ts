@@ -11,7 +11,6 @@ interface Message {
 export declare let currentChatId: string;
 export declare let chats: Chat[];
 export declare function deleteChatFromChats(chatId: string): void;
-export declare function addStarredChat(starredChat: Chat[]): void;
 export declare function changeCurrentChatId(chatId: string): void;
 export {};
 //# sourceMappingURL=init.d.ts.map

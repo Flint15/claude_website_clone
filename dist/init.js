@@ -10,6 +10,10 @@ export let chats = storedChats
     : [];
 console.log(chats);
 renderChats();
+if (currentChatId) {
+    renderMessages(currentChatId);
+    liftMessagesFlag();
+}
 export function deleteChatFromChats(chatId) {
     chats = chats.filter(chat => chat.chatId !== chatId);
     console.log(`Chat with id-"${chatId}" was deleted`);
@@ -19,13 +23,7 @@ export function deleteChatFromChats(chatId) {
         window.location.replace('./new.html');
     }
 }
-export function addStarredChat(starredChat) {
-}
 export function changeCurrentChatId(chatId) {
     currentChatId = chatId;
-}
-if (url.get('chat-id')) {
-    renderMessages(currentChatId);
-    liftMessagesFlag();
 }
 //# sourceMappingURL=init.js.map
