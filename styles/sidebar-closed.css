@@ -1,39 +1,54 @@
-aside.closed .sidebar-claude-link, 
-aside.closed .recents-chats-label, 
-aside.closed .navigation-label, 
-aside.closed .user-profile-infos,
-aside.closed .chats {
-  display: none;
-  transition: display 2s;
+@media (max-width: 960px) {
+  aside.closed .sidebar-content{
+    padding: 0px;
+  }
+
+  aside.closed .sidebar-claude-link,
+  aside.closed .sidebar-actions-container,
+  aside.closed .sidebar-content .chats,
+  aside.closed .user {
+    display: none;
+  }
+
+  aside.closed .sidebar-button-container {
+    display: block;
+    position: fixed;
+    top: 13px;
+    left: 10px;
+  }
 }
 
-aside.closed .sidebar-button-container {
-  position: fixed;
-  top: 15px;
-  left: 10px;
-}
-
-aside.closed .user {
+@media (min-width: 961px) {
+  aside.closed .sidebar-claude-link, 
+  aside.closed .recents-chats-label, 
+  aside.closed .navigation-label, 
+  aside.closed .user-profile-infos,
+  aside.closed .chats {
+    display: none;
+    transition: display 2s;
+  }
+  aside.closed .user {
   position: fixed;
   bottom: 15px;
   left: 5px;
-
+  
   width: fit-content;
   height: fit-content;
-}
+  }
 
-aside.closed .user button {
-  padding: 0px;
-}
-
-aside.closed .user-button {
-  border: none;
-}
-
-aside.closed .can-focus-user:hover {
-  background-color: transparent;
-}
-
-aside.closed .tooltip {
-  display: revert;
+  aside.closed .user button {
+    padding: 0px;
+  }
+  
+  aside.closed .user-button {
+    border: none;
+  }
+  
+  aside.closed .can-focus-user:hover {
+    background-color: transparent;
+  }
+  
+  aside.closed .tooltip {
+    display: revert;
+  }
 }
