@@ -162,6 +162,8 @@ main {
   gap: 8px;
 
   width: 470px;
+
+  flex: 1;
 }
 
 .additional-actions-container button {
