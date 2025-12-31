@@ -27,6 +27,8 @@ renderChats()
 if (currentChatId) {
   renderMessages(currentChatId)
   liftMessagesFlag()
+  document.querySelector('.content')
+    ?.classList.add('messages-filled')
 }
 
 export function deleteChatFromChats(chatId: string) {

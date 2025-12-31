@@ -108,6 +108,17 @@ main {
   width: 636px;
 }
 
+.content.content.messages-filled {
+  padding: 50px;
+}
+
+.content.messages-filled .input-field {
+  position: fixed;
+  bottom: 10px;
+
+  border: 1px solid var(--color-border-primary);
+}
+
 .input-container {
   margin-bottom: 40px;
 }
