@@ -117,6 +117,12 @@ main {
   bottom: 10px;
 
   border: 1px solid var(--color-border-primary);
+
+  width: 720px;
+}
+
+.content.messages-filled .input-container {
+  margin-bottom: 10px;
 }
 
 .input-container {
@@ -160,7 +166,7 @@ main {
 
 .additional-actions-container button {
   background-color: transparent;
-  border: 1px solid var(--color-border-primary);
+  border: none;
   border-radius: 9px;
 
   display: flex;

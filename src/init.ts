@@ -29,6 +29,8 @@ if (currentChatId) {
   liftMessagesFlag()
   document.querySelector('.content')
     ?.classList.add('messages-filled')
+  document.querySelector<HTMLInputElement>('#input-element')!
+    .placeholder = 'Reply...'
 }
 
 export function deleteChatFromChats(chatId: string) {
